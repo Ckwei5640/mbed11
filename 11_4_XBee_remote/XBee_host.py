@@ -3,6 +3,7 @@ import serial
 # XBee setting
 serdev = '/dev/ttyUSB0'
 s = serial.Serial(serdev, 9600)
+'''
 s.write("+++".encode())
 char = s.read(2)
 print("Enter AT mode.")
@@ -39,6 +40,7 @@ s.write("ATCN\r\n".encode())
 char = s.read(3)
 print("Exit AT mode.")
 print(char.decode())
+'''
 # send to remote
 s.write("abcd\r\n".encode())
 line = s.read(5)
